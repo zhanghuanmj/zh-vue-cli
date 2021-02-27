@@ -1,6 +1,6 @@
 {
   "name": "zh-vue-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue antd pc",
   "main": "index.js",
   "bin": "cli.js",
