@@ -1,0 +1,14 @@
+{
+  "name": "zh-vue-cli",
+  "version": "1.0.0",
+  "description": "vue antd pc",
+  "main": "index.js",
+  "bin": "cli.js",
+  "author": "zhanghuan",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^7.1.0",
+    "ejs": "^3.1.6",
+    "inquirer": "^8.0.0"
+  }
+}

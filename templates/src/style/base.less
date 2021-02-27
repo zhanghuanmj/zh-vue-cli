@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/**
+ * 基础样式
+ * @module base
+ * @author zhanghuan
+ * @date 2021/02/11
+ */
+@import './common.less';
+
+/* 超出三行隐藏 */
+.etc3 {
+    height: calc(3 * 1.5em);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* 页面上方的分割线 */
+.page-top-divider {
+    margin-top: 0 !important;
+}
+
+/* 页面上方的检索 */
+.page-search-wrapper {
+    .ant-form-inline {
+        .ant-form-item {
+            display: flex;
+            margin-bottom: 24px;
+            margin-right: 0;
+
+            .ant-form-item-control-wrapper {
+                flex: 1 1;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            >.ant-form-item-label {
+                line-height: 32px;
+                padding-right: 8px;
+                width: auto;
+            }
+
+            .ant-form-item-control {
+                height: 32px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .page-search-buttons {
+        display: block;
+        margin-bottom: 24px;
+        white-space: nowrap;
+    }
+}
+
+/*列表上方操作按钮区域*/
+.page-operator {
+    margin-bottom: 18px;
+    border-top: 5px;
+
+    .ant-btn {
+        margin-right: 6px
+    }
+
+    /* 选择数据条数 */
+    .table-info {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 15px !important;
+    }
+}
+
+/*列表td的padding设置*/
+.ant-table-tbody .ant-table-row td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* 新增、编辑弹出框 */
+.modal-header {
+    position: relative;
+
+    .modal-header-btns {
+        position: absolute;
+        right: 32px;
+        top: -16px;
+
+        .modal-header-btn {
+            width: 54px;
+            height: 54px;
+            border: 0;
+        }
+    }
+}
+
+.drawer-bootom-footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 16px;
+    text-align: right;
+    left: 0;
+    background: #fff;
+    border-radius: 0 0 2px 2px;
+}
+
+/* 中间弹框 */
+/* 只滚动内容区时用
+.mid-modal .ant-table-wrapper {
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+} */
