@@ -75,7 +75,6 @@
         },
         methods: {
             init() {
-                this.modalWidth = this.width
                 this.resetScreenSize(); // 调用此方法,根据屏幕宽度自适应调整抽屉的宽度
             },
             handleOk(e) {
@@ -96,9 +95,9 @@
             resetScreenSize() {
                 let screenWidth = window.document.body.clientWidth;
                 if (screenWidth < 500) {
-                    this.width = screenWidth;
+                    this.modalWidth = screenWidth;
                 } else {
-                    this.width = WIDTH;
+                    this.modalWidth = this.width
                 }
             },
             /**
@@ -112,7 +111,7 @@
                 if (this.modaltoggleFlag) {
                     this.modalWidth = window.innerWidth;
                 } else {
-                    this.modalWidth = WIDTH;
+                    this.resetScreenSize()
                 }
                 this.modaltoggleFlag = !this.modaltoggleFlag;
             },

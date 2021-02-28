@@ -105,7 +105,7 @@
                         }
                     }) */
                 } else {
-                    this.modalWidth = WIDTH;
+                    this.modalWidth = this.width;
                     /* // 只滚动内容区时用
                     midModal.forEach(item => {
                         if (item.style.display !== 'none') {
