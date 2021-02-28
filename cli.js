@@ -124,6 +124,11 @@ const createApp = (anwsers) => {
 
     })
     process.stdout.write("\n"); // end the line
+
+    console.log('\033[42;30m Done \033[0m')
+    console.log('\033[40;32m cd ' + title + ' \033[0m')
+    console.log('\033[40;32m npm install \033[40;33m or \033[40;32m yarn install \033[0m')
+    console.log('\033[40;32m npm run serve \033[40;33m or \033[40;32m yarn serve \033[0m')
 }
 
 if (cmd === 'create') {
@@ -141,8 +146,3 @@ if (cmd === 'create') {
         })
     }
 }
-
-console.log('\033[42;30m Done \033[0m')
-console.log('\033[40;32m cd ' + title + ' \033[0m')
-console.log('\033[40;32m npm install \033[40;33m or \033[40;32m yarn install \033[0m')
-console.log('\033[40;32m npm run serve \033[40;33m or \033[40;32m yarn serve \033[0m')

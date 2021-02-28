@@ -68,7 +68,7 @@ export const ListMixin = {
                 return
             }
             //加载数据 若传入参数1则加载第一页的内容
-            if (page === 1) {
+            if (page === 200) {
                 this.pagination.current = 1;
             }
             let params = this.getQueryParams(); //查询条件
@@ -183,7 +183,7 @@ export const ListMixin = {
                     content: "是否删除选中数据?",
                     onOk: function() {
                         that.$axios.delete(that.urls.deleteBatch, { ids: ids }).then((res) => {
-                            if (res.code === 1) {
+                            if (res.code === 200) {
                                 that.$message.success(res.msg);
                                 that.loadData(1);
                                 that.onClearSelected();
@@ -208,7 +208,7 @@ export const ListMixin = {
                 return
             }
             this.$axios.post(this.urls.delete, { id: id }).then((res) => {
-                if (res.code === 1) {
+                if (res.code === 200) {
                     this.$message.success(res.msg);
                     this.loadData(1);
                 } else {
@@ -291,7 +291,7 @@ export const ListMixin = {
          */
         modalFormOk() {
             // 重载列表
-            if (this.modalStatus === 1) {
+            if (this.modalStatus === 200) {
                 this.loadData(1);
                 return;
             }

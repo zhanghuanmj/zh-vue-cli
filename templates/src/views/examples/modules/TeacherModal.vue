@@ -220,6 +220,7 @@
              * @return {void} 
              */
             close() {
+                this.form.resetFields();
                 this.visible = false;
             },
             /**
